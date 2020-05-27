@@ -1,10 +1,16 @@
 = Spring Session - Spring Boot
 Rob Winch, Vedran Pavić
-:toc:
+:toc: left
+:stylesdir: ../
+:highlightjsdir: ../js/highlight
+:docinfodir: guides
 
 This guide describes how to use Spring Session to transparently leverage Redis to back a web application's `HttpSession` when you use Spring Boot.
 
 NOTE: You can find the completed guide in the <<boot-sample, boot sample application>>.
+
+[#index-link]
+link:../index.html[Index]
 
 == Updating Dependencies
 
@@ -53,7 +59,7 @@ Further customization is possible by using `application.properties`, as the foll
 .src/main/resources/application.properties
 ----
 server.servlet.session.timeout= # Session timeout. If a duration suffix is not specified, seconds is used.
-spring.session.redis.flush-mode=on-save # Sessions flush mode.
+spring.session.redis.flush-mode=on_save # Sessions flush mode.
 spring.session.redis.namespace=spring:session # Namespace for keys used to store sessions.
 ----
 ====
@@ -151,6 +157,6 @@ To do so, enter the following into your terminal, being sure to replace `7e8383a
 ----
 	$ redis-cli del spring:session:sessions:7e8383a4-082c-4ffe-a4bc-c40fd3363c5e
 ----
-=====
+====
 
 Now you can visit the application at http://localhost:8080/ and observe that we are no longer authenticated.

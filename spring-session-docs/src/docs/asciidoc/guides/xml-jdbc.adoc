@@ -1,10 +1,16 @@
 = Spring Session - HttpSession (Quick Start)
 Rob Winch, Vedran Pavić
-:toc:
+:toc: left
+:stylesdir: ../
+:highlightjsdir: ../js/highlight
+:docinfodir: guides
 
 This guide describes how to use Spring Session to transparently leverage a relational to back a web application's `HttpSession` with XML based configuration.
 
 NOTE: You can find the completed guide in the <<httpsession-jdbc-xml-sample, httpsession-jdbc-xml sample application>>.
+
+[#index-link]
+link:../index.html[Index]
 
 == Updating Dependencies
 
@@ -68,8 +74,8 @@ You must have the following in your pom.xml:
 	<url>https://repo.spring.io/libs-milestone</url>
 </repository>
 ----
-endif::[]
 ====
+endif::[]
 
 // tag::config[]
 
@@ -101,7 +107,7 @@ For additional information on how to configure data access-related concerns, see
 
 == XML Servlet Container Initialization
 
-Our <<httpsession-xml-spring-configuration,Spring Configuration>> created a Spring bean named `springSessionRepositoryFilter` that implements `Filter`.
+Our <<httpsession-jdbc-xml-spring-configuration,Spring Configuration>> created a Spring bean named `springSessionRepositoryFilter` that implements `Filter`.
 The `springSessionRepositoryFilter` bean is responsible for replacing the `HttpSession` with a custom implementation that is backed by Spring Session.
 
 In order for our `Filter` to do its magic, we need to instruct Spring to load our `session.xml` configuration.

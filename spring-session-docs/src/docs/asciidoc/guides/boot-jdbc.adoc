@@ -1,10 +1,16 @@
 = Spring Session - Spring Boot
 Rob Winch, Vedran Pavić
-:toc:
+:toc: left
+:stylesdir: ../
+:highlightjsdir: ../js/highlight
+:docinfodir: guides
 
 This guide describes how to use Spring Session to transparently leverage a relational database to back a web application's `HttpSession` when you use Spring Boot.
 
 NOTE: You can find the completed guide in the <<httpsession-jdbc-boot-sample, httpsession-jdbc-boot sample application>>.
+
+[#index-link]
+link:../index.html[Index]
 
 == Updating Dependencies
 
@@ -45,6 +51,9 @@ The following listing shows how to do so:
 spring.session.store-type=jdbc # Session store type.
 ----
 ====
+
+If a single Spring Session module is present on the classpath, Spring Boot uses that store implementation automatically.
+If you have more than one implementation, you must choose the StoreType that you wish to use to store the sessions, as shows above.
 
 Under the hood, Spring Boot applies configuration that is equivalent to manually adding the `@EnableJdbcHttpSession` annotation.
 This creates a Spring bean with the name of `springSessionRepositoryFilter`. That bean implements `Filter`.

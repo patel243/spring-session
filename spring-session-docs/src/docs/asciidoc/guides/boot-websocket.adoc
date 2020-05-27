@@ -1,7 +1,10 @@
 = Spring Session - WebSocket
 Rob Winch
-:toc:
+:toc: left
 :websocketdoc-test-dir: {docs-test-dir}docs/websocket/
+:stylesdir: ../
+:highlightjsdir: ../js/highlight
+:docinfodir: guides
 
 This guide describes how to use Spring Session to ensure that WebSocket messages keep your HttpSession alive.
 
@@ -12,9 +15,12 @@ Specifically,it does not work with using https://www.jcp.org/en/jsr/detail?id=35
 
 // end::disclaimer[]
 
+[#index-link]
+link:../index.html[Index]
+
 == HttpSession Setup
 
-The first step is to integrate Spring Session with the HttpSession. These steps are already outlined in the link:httpsession.html[HttpSession Guide].
+The first step is to integrate Spring Session with the HttpSession. These steps are already outlined in the link:./boot-redis.html[HttpSession with Redis Guide].
 
 Please make sure you have already integrated Spring Session with HttpSession before proceeding.
 

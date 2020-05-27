@@ -4,7 +4,7 @@ buildscript {
 		snapshotBuild = version.endsWith('SNAPSHOT')
 		milestoneBuild = !(releaseBuild || snapshotBuild)
 
-		springBootVersion = '2.2.4.RELEASE'
+		springBootVersion = '2.2.7.RELEASE'
 	}
 
 	repositories {
@@ -13,7 +13,7 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'io.spring.gradle:spring-build-conventions:0.0.27.RELEASE'
+		classpath 'io.spring.gradle:spring-build-conventions:0.0.32.RELEASE'
 		classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
 	}
 }
